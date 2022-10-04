@@ -9,7 +9,7 @@ data:
     pred: "keys-all"
     keys:
       - {{{to-key}}}
-publicMeta:
+meta:
   chainId: "{{chain}}"
   sender: {{{from-acct}}}
   gasLimit: 4600

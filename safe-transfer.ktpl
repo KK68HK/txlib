@@ -1,7 +1,7 @@
 code: |-
   (coin.transfer "{{{from-acct}}}" "{{{to-acct}}}" {{amount}})
 data:
-publicMeta:
+meta:
   chainId: "{{chain}}"
 
   # This transaction is safe because to-acct is paying the gas
