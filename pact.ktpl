@@ -1,0 +1,11 @@
+codeFile: {{pact-file}}
+data:
+publicMeta:
+  chainId: "{{chain}}"
+  sender: dummy
+  gasLimit: 50000
+  gasPrice: 0.00000001
+  ttl: 3600
+networkId: {{network}}
+signers:
+type: exec
