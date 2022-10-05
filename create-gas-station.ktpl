@@ -28,7 +28,7 @@ code: |-
       (mk-guard 0.00000001))
   )
 data:
-publicMeta:
+meta:
   chainId: "{{chain}}"
   sender: {{{funding-acct}}}
   gasLimit: 2000
