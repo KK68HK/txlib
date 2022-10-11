@@ -6,6 +6,6 @@ publicMeta:
   gasLimit: 50000
   gasPrice: 0.00000001
   ttl: 3600
-networkId: {{network}}
+networkId: "{{network}}"
 signers:
 type: exec

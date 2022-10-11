@@ -11,7 +11,7 @@ meta:
   gasLimit: 2300
   gasPrice: 0.000001
   ttl: 600
-networkId: {{network}}
+networkId: "{{network}}"
 signers:
   - public: "{{from-key}}"
     caps:
