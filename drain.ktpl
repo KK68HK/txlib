@@ -6,17 +6,17 @@ meta:
 
   # In order to drain an account without leaving any dust, the receiver pays
   # the gas.
-  sender: {{{to-acct}}}
+  sender: "{{{to-acct}}}"
   gasLimit: 2300
   gasPrice: 0.000001
   ttl: 600
 networkId: {{network}}
 signers:
-  - public: {{from-key}}
+  - public: "{{from-key}}"
     caps:
       - name: "coin.TRANSFER"
-        args: [{{{from-acct}}}, {{{to-acct}}}, {{max-amount}}]
-  - public: {{to-key}}
+        args: ["{{{from-acct}}}", "{{{to-acct}}}", {{max-amount}}]
+  - public: "{{to-key}}"
     caps:
       - name: "coin.GAS"
         args: []

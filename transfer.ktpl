@@ -3,13 +3,13 @@ code: |-
 data:
 meta:
   chainId: "{{chain}}"
-  sender: {{{from-acct}}}
+  sender: "{{{from-acct}}}"
   gasLimit: 2300
   gasPrice: 0.000001
   ttl: 600
 networkId: {{network}}
 signers:
-  - public: {{from-key}}
+  - public: "{{from-key}}"
     caps:
       - name: "coin.TRANSFER"
         args: ["{{{from-acct}}}", "{{{to-acct}}}", {{amount}}]

@@ -30,21 +30,21 @@ code: |-
 data:
 meta:
   chainId: "{{chain}}"
-  sender: {{{funding-acct}}}
+  sender: "{{{funding-acct}}}"
   gasLimit: 2000
   gasPrice: 0.00000001
   ttl: 7200
 networkId: {{network}}
 signers:
-  - public: {{funding-key}}
+  - public: "{{funding-key}}"
     caps:
       - name: "coin.TRANSFER"
-        args: [{{{funding-acct}}}, {{{gas-station-name}}}, {{amount}}]
+        args: ["{{{funding-acct}}}", "{{{gas-station-name}}}", {{amount}}]
       - name: "coin.GAS"
         args: []
-  - public: {{owner-key}}
+  - public: "{{owner-key}}"
     caps:
       - name: "coin.ROTATE"
-        args: [{{{gas-station-name}}}]
+        args: ["{{{gas-station-name}}}"]
 type: exec
 

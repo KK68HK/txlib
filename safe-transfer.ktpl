@@ -3,19 +3,17 @@ code: |-
 data:
 meta:
   chainId: "{{chain}}"
-
-  # This transaction is safe because to-acct is paying the gas
-  sender: {{{to-acct}}}
+  sender: "{{{to-acct}}}"
   gasLimit: 4600
   gasPrice: 0.000001
   ttl: 600
 networkId: {{network}}
 signers:
-  - public: {{from-key}}
+  - public: "{{from-key}}"
     caps:
       - name: "coin.TRANSFER"
-        args: [{{{from-acct}}}, {{{to-acct}}}, {{amount}}]
-  - public: {{to-key}}
+        args: ["{{{from-acct}}}", "{{{to-acct}}}", {{amount}}]
+  - public: "{{to-key}}"
     caps:
       - name: "coin.GAS"
         args: []
