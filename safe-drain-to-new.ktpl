@@ -1,0 +1,25 @@
+code: |-
+  (coin.transfer-create "{{{from-acct}}}" "{{{to-acct}}}" (read-keyset "k") (coin.get-balance "{{{from-acct}}}"))
+  (enforce-keyset (read-keyset "k"))
+data:
+  k:
+    pred: "keys-all"
+    keys:
+      - "{{{to-key}}}"
+meta:
+  chainId: "{{chain}}"
+  sender: "{{{gas-acct}}}"
+  gasLimit: 2300
+  gasPrice: 0.000001
+  ttl: 600
+networkId: "{{network}}"
+signers:
+  - public: "{{from-key}}"
+    caps:
+      - name: "coin.TRANSFER"
+        args: ["{{{from-acct}}}", "{{{to-acct}}}", {{max-amount}}]
+  - public: "{{gas-key}}"
+    caps:
+      - name: "coin.GAS"
+        args: []
+type: exec
