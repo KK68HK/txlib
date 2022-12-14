@@ -1,0 +1,24 @@
+code: |-
+  (coin.transfer-create "k:{{{from-key}}}" "k:{{{to-key}}}" (read-keyset "k") {{amount}})
+  (enforce-keyset (read-keyset "k"))
+data:
+  k: 
+    pred: "keys-all"
+    keys:
+      - "{{{to-key}}}"
+meta:
+  chainId: "{{chain}}"
+  sender: "k:{{{from-key}}}"
+  gasLimit: 4600
+  gasPrice: 0.000001
+  ttl: 600
+networkId: "{{network}}"
+signers:
+  - public: "{{from-key}}"
+    caps:
+      - name: "coin.TRANSFER"
+        args: ["k:{{{from-key}}}", "k:{{{to-key}}}", {{amount}}]
+      - name: "coin.GAS"
+        args: []
+  - public: "{{to-key}}"
+type: exec
